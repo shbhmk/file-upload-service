@@ -1,11 +1,13 @@
 package com.example.fileuploadservice.dto;
 
+import com.example.fileuploadservice.validation.PasswordMatches;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
+@PasswordMatches
 public class RegisterRequest {
     @NotBlank(message = "Username is required")
     private String username;
