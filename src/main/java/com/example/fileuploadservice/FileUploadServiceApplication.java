@@ -1,9 +1,9 @@
-package com.example.file_upload_service;
+package com.example.fileuploadservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages = {"com.example.file_upload_service"})
+@SpringBootApplication
 public class FileUploadServiceApplication {
 
 	public static void main(String[] args) {

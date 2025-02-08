@@ -1,8 +1,11 @@
 FROM openjdk:17-jdk-slim
 
 WORKDIR /app
-COPY target/file-upload-service-0.0.1-SNAPSHOT.jar app.jar
 
-EXPOSE 8080
+COPY target/*.jar app.jar
+RUN ls -al /app
+EXPOSE 8085 8080
+
+
 
 ENTRYPOINT ["java", "-jar", "app.jar"]

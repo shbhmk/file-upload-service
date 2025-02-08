@@ -1,7 +1,7 @@
-package com.example.file_upload_service.service;
+package com.example.fileuploadservice.service;
 
-import com.example.file_upload_service.repository.FileRecordRepository;
-import com.example.file_upload_service.model.FileRecord;
+import com.example.fileuploadservice.repository.FileRecordRepository;
+import com.example.fileuploadservice.model.FileRecord;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,10 +32,10 @@ public class FileUploadService {
             }
 
 
-            String contentType = file.getContentType();
-            if(!contentType.equals("text/csv") && !contentType.equals("application/json")){
-                throw new IllegalArgumentException("Unsupported File Format" + contentType );
-            }
+//            String contentType = file.getContentType();
+//            if(!contentType.equals("text/csv") && !contentType.equals("application/json")){
+//                throw new IllegalArgumentException("Unsupported File Format" + contentType );
+//            }
 
 
             FileRecord fileRecord = new FileRecord();
@@ -48,7 +48,7 @@ public class FileUploadService {
             fileRecordRepository.save(fileRecord);
 
             logger.info("Publishing the metadata to the kafka {}" , KAFKA_TOPIC);
-            kafkaTemplate.send(KAFKA_TOPIC , objectMapper.writeValueAsString(fileRecord));
+            kafkaTemplate.send(KAFKA_TOPIC , "got msg");
 
 
             return "File upload Successful";

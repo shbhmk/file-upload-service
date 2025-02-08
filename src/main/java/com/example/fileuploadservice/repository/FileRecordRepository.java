@@ -1,6 +1,6 @@
-package com.example.file_upload_service.repository;
+package com.example.fileuploadservice.repository;
 
-import com.example.file_upload_service.model.FileRecord;
+import com.example.fileuploadservice.model.FileRecord;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

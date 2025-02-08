@@ -1,4 +1,4 @@
-package com.example.file_upload_service.model;
+package com.example.fileuploadservice.model;
 
 import jakarta.persistence.*;
 import lombok.Data;

@@ -1,6 +1,6 @@
-package com.example.file_upload_service.controller;
+package com.example.fileuploadservice.controller;
 
-import com.example.file_upload_service.service.FileUploadService;
+import com.example.fileuploadservice.service.FileUploadService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
